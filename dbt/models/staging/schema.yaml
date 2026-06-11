@@ -1,0 +1,12 @@
+version: 2
+sources:
+  - name: stap_db
+    tables:
+      - name: raw_orders
+models:
+  - name: stg_orders
+    columns:
+      - name: order_id
+        tests:
+          - unique
+          - not_null

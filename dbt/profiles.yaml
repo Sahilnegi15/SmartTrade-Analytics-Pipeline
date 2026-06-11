@@ -1,0 +1,9 @@
+stap_dbt:
+  target: dev
+  outputs:
+    dev:
+      type: athena
+      s3_staging_dir: s3://stap-transformed-yourname/athena-results/
+      region_name: us-east-1
+      database: stap_db
+      schema: stap_dbt
